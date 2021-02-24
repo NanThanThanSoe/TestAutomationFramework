@@ -1,7 +1,7 @@
 Download Project
 
 ```
-git clone ssh://git@git.ivu-ag.com:7999/~nan.thanthansoe/testframework.git
+git clone https://github.com/NanThanThanSoe/testingframework.git
 cd testframework
 git init
 ```
