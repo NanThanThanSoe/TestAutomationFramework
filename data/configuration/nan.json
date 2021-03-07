@@ -1,0 +1,16 @@
+{
+    "tests": [
+        "test_tuxt_60.py"
+    ],
+    "configuration": {
+        "test_tuxt_61": {
+            "fw_version": "6.6.0",
+            "allow_newer_version": true
+        },
+        "global": {
+            "ssh_username": "root",
+            "ssh_password": "LafPordEt6ov"
+        }
+    }
+}
+  

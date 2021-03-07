@@ -1,0 +1,9 @@
+{
+    "path": "/sys/devices/housekeeper",
+    "files": [
+        "update_fw_ready",
+        "update_fw",
+        "update_fw_status"
+    ],
+    "exactMatch": false
+}
