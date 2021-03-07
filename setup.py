@@ -11,7 +11,7 @@ setuptools.setup(
     name="nantestfw",
     version="0.0.1",
     author="Nan",
-    author_email="nan.thanthansoe@ivu.de",
+    author_email="thanthansoe1994@gmail.com",
     description="Nan's thesis works",
     packages=setuptools.find_packages()
 )
