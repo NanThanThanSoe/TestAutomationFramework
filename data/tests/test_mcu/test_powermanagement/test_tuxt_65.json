@@ -1,0 +1,40 @@
+{
+    "path1": "/sys/devices/housekeeper/power_supply/bat0",
+    "path2": "/sys/devices/housekeeper/power_supply/dc/",
+    "files1": [
+        "alarm",
+        "charging",
+        "current_now",
+        "ntc_present",
+        "present",
+        "subsystem",
+        "temp_alert_max",
+        "temp_max",
+        "test",
+        "uevent",
+        "voltage_now",
+        "charge_now",
+        "ctrl_alarm",
+        "device",
+        "power",
+        "status",
+        "temp",
+        "temp_alert_min",
+        "temp_min",
+        "type",
+        "voltage_min_design"
+    ],
+    "files2": [
+        "alarm",
+        "device",
+        "online",
+        "power",
+        "subsystem",
+        "type",
+        "uevent",
+        "voltage_max",
+        "voltage_min",
+        "voltage_now"
+    ],
+    "exactMatch": false
+}

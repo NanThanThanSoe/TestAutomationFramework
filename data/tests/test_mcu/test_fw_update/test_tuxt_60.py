@@ -1,11 +1,12 @@
 import logging
+import pytest
 
 LOGGER = logging.getLogger(__name__)
 
-
+@pytest.mark.ssh
+#@pytest.mark.slow
 class Test_TUXT_60:
     
-
     def test_tuxt_60_0(self, configuration, ssh_command):
         """
         Überprüfen, dass die Schnittstelle im Sysfs vorhanden ist

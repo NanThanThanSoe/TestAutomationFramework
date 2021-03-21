@@ -1,0 +1,8 @@
+{
+    "fw_bin_source": "data/fw/mcu",
+    "fw_bin_version": "6.6.2",
+    "path_fw_bin_destination": "/lib/firmware/ivu",
+    "fw_bin_rename": "ivumcu.bin",
+    "path_update": "/sys/devices/housekeeper/update_fw",
+    "battery_status": "/sys/devices/housekeeper/power_supply/bat0/present"
+}

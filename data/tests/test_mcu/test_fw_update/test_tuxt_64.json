@@ -1,0 +1,7 @@
+{
+    "fw_bin_source": "//ivu-ag.com/storage/FTP/FTP_ivu.ticketbox-xl/software_firmware_hardware/04_MCU/fw",
+    "fw_bin_version": "6.6.7",
+    "path_fw_bin_destination": "/lib/firmware/ivu",
+    "fw_bin_rename": "ivumcu.bin",
+    "path_update": "/sys/devices/housekeeper/update_fw"
+}

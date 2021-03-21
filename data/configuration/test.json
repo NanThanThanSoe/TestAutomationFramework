@@ -1,0 +1,18 @@
+{
+    "tests": [
+        "test_mcu/test_fw_update/test_tuxt_60.py",
+        "test_mcu/test_fw_update/test_tuxt_62.py",
+        "test_mcu/test_powermanagement/test_tuxt_65.py"
+    ],
+    "configuration": {
+        "test_tuxt_61": {
+            "fw_version": "6.6.0",
+            "allow_newer_version": true
+        },
+        "global": {
+            "ssh_username": "root",
+            "ssh_password": "LafPordEt6ov"
+        }
+    }
+}
+  
