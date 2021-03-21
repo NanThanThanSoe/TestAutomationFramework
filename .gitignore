@@ -1,3 +1,7 @@
 .pytest_cache/
-precon/.pytest_cache/
+plugins/.pytest_cache/
 testcases/.pytest_cache/
+logs/
+precon/data/
+precon/logs
+.vscode
