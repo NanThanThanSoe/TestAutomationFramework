@@ -1,0 +1,14 @@
+{
+    "path": "/sys/devices/housekeeper/car-eeprom",
+    "files": {
+        ".":
+            ["cached", "content", "dirty", "driver_override", "modalias", "reload", "status", "status_dbg", "uevent"],
+        "driver":
+            ["bind", "ivumcu-eeprom.7.auto", "module", "uevent", "unbind"],
+        "power":
+            ["autosuspend_delay_ms", "control", "runtime_active_time", "runtime_status", "runtime_suspended_time"],
+        "subsystem":
+            ["devices", "drivers", "drivers_autoprobe", "drivers_probe", "uevent"]
+    },
+    "exactMatch": true
+}

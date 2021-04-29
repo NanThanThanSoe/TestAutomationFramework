@@ -1,0 +1,12 @@
+{
+    "path1": "/sys/devices/housekeeper/power_supply/dc/voltage_now",
+    "path2": "/sys/devices/housekeeper/power_supply/bat0/ntc_present",
+    "path3": "/sys/devices/housekeeper/power_supply/bat0/present",
+    "path4": "/sys/devices/housekeeper/power_supply/bat0/voltage_now",
+    "path5": "/sys/devices/housekeeper/power_supply/bat0/temp",
+    "val1.0": "16500000",
+    "val1.1": "40000000",
+    "val4": "6800000",
+    "val5.0": "0",
+    "val5.1": "450"
+}

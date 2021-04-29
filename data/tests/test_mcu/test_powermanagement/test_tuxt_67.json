@@ -1,0 +1,6 @@
+{
+    "path1.1": "/sys/devices/housekeeper/power_supply/bat0/present",
+    "path1.2": "/sys/devices/housekeeper/power_supply/bat0/voltage_now",
+    "path2": "/sys/devices/housekeeper/power_supply/dc/voltage_now",
+    "val2": "1000000"
+}

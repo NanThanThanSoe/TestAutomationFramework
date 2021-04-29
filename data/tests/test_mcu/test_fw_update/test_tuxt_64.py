@@ -23,6 +23,7 @@ class Test_TUXT_64:
         Man ist über eine serielle Konsole oder per SSH mit dem Gerät verbunden und als Benutzer “root” eingeloggt (ggf. erst als User “ivu” einloggen und dann mit “sudo -i” root werden). 
     """
 
+    @pytest.mark.repeat(10)
     def test_tuxt_64_0(self, configuration, ssh_command, ping, ping_until, ping_timeout, scp):
         """
         10 mal die Schritte aus TUXT-62 wiederholen.

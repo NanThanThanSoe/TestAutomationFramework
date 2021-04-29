@@ -4,14 +4,10 @@ import os
 import hashlib
 import time
 import re
-import pytest
 
 LOGGER = logging.getLogger(__name__)
 
-#@pytest.mark.ssh
-#@pytest.mark.scp
-#@pytest.mark.ping
-@pytest.mark.slow
+
 class Test_TUXT_62:
     """
     TUXT-62
@@ -87,6 +83,13 @@ class Test_TUXT_62:
         except:
             output = error = ""
 
+        # sh: line 0: echo: write error: Invalid argument
+        # > Tritt manchmal auf, Grund unklar
+        # sh: line 0: echo: write error: Input/output error
+        # > Vermutlich Batterie nicht verbunden oder leer. Das Gerät scheint nicht bereit für ein Update
+        # sh: line 0: echo: write error: No such file or directory
+        # > Vermutlich wurde die FW Binary nicht Datei gefunden
+
         if error.strip() != "":
             assert error.strip() == "", "The update could not be started for some reason"
 
@@ -108,7 +111,8 @@ class Test_TUXT_62:
 
         if Test_TUXT_62.date == "":
             LOGGER.warn("Kein Datum gespeichert beim FW-Update. Überprüft werden nur die letzten 5 Minuten.")
-           
+            # output, _ = ssh_command("date +\"%F %T\" -d \"5 minutes ago\"")
+            # date = output.strip()
             Test_TUXT_62.date = "5 minutes ago"
         output, error = ssh_command(f"journalctl -t kernel -r --since=\"{Test_TUXT_62.date}\" | grep -B 1 \"Updating MCU firmware\"")
 

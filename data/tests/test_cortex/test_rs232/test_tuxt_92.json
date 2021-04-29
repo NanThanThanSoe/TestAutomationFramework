@@ -1,0 +1,10 @@
+{
+    "path_src": "submodules/autotests/serial",
+    "path_dst": "/harddisk/tests",
+    "test_file_or_dir": "test_rs232.py",
+    "files": [
+        "test_rs232.py"
+    ],
+    "exactMatch": false,
+    "profile": "spec"
+}

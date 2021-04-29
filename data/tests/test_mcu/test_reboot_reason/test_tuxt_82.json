@@ -1,0 +1,4 @@
+{
+    "path_reason": "/sys/devices/housekeeper/watchdog/boot_reason",
+    "path_code": "/sys/devices/housekeeper/watchdog/boot_code"
+}

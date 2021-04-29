@@ -4,14 +4,9 @@ import os
 import hashlib
 import time
 import re
-import pytest
 
 LOGGER = logging.getLogger(__name__)
 
-#@pytest.mark.ssh
-#@pytest.mark.scp
-#@pytest.mark.ping
-@pytest.mark.slow
 class Test_TUXT_104:
     """
     TUXT-104

@@ -1,0 +1,5 @@
+{
+    "path": "/sys/devices/housekeeper/version_number",
+    "fw_version": "6.6.0",
+    "allow_newer_version": true
+}
