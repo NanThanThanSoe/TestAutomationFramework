@@ -4,4 +4,6 @@ testcases/.pytest_cache/
 logs/
 precon/data/
 precon/logs
-.vscode
+__pycache__
+.coverage
+.tmp

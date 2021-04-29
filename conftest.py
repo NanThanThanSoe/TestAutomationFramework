@@ -8,12 +8,15 @@ import os
 
 LOGGER = logging.getLogger(__name__)
 
+
 def refactor(string: str) -> str:
     return string.replace("/", ".").replace("\\", ".").replace(".py", "")
 
+
 pytest_plugins = [
-    refactor(fixture) for fixture in glob("precon/**/*.py", recursive=True) if "__" not in fixture
+    refactor(fixture) for fixture in glob("plugins/**/*.py", recursive=True) if "__" not in fixture
 ]
+
 
 def pytest_configure(config):
     for path in config.getini("testpaths"):
@@ -49,3 +52,24 @@ def pytest_html_results_table_row(report, cells):
         cells.insert(2, html.td(report.description))
     else:
         cells.insert(2, html.td(""))
+
+
+@pytest.hookimpl(hookwrapper=True)
+def pytest_runtest_makereport(item, call):
+    pytest_html = item.config.pluginmanager.getplugin('html')
+    outcome = yield
+    report = outcome.get_result()
+    report.description = str(item.function.__doc__).strip()
+
+    extra = getattr(report, 'extra', [])
+    if report.when == 'call':
+        # always add url to report
+        test_id = str(item.parent.obj.__doc__).strip().partition('\n')[0]
+        test_id_parts = re.match(r"^(\w*)-(\d*)$", test_id)
+        if test_id_parts:
+            extra.append(pytest_html.extras.url(f"https://tl-test.docker.ivu-ag.com/linkto.php?item=testcase&tprojectPrefix={test_id_parts[1]}&id={test_id_parts[0]}"))
+        #xfail = hasattr(report, 'wasxfail')
+        #if (report.skipped and xfail) or (report.failed and not xfail):
+        #    # only add additional html on failure
+        #    extra.append(pytest_html.extras.html('<div>Additional HTML</div>'))
+        report.extra = extra

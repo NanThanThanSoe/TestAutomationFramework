@@ -10,7 +10,7 @@ import os
 def run():
     boxip = os.environ.get("BOX_IP", "10.13.201.18")
     print(f"Using Box IP: {boxip}")
-    config = Test_Plan("data/configuration/nan.json")
+    config = Test_Plan("data/configuration/test3.json")
 
     config.configuration.customize_config("rhost", boxip)
 
