@@ -100,3 +100,9 @@ class TH085:
         if len(cmd) > 0:
             val = self.io(cmd=cmd, size=size)
         return val
+
+    def reset(self):
+        with open("src/lib/th085.json") as config_file:
+            th085_state_default = json.loads(config_file.read())
+            for default in th085_state_default.values():
+                self.write(port=default["port"], pin=default["pin"], state=default["state"])
