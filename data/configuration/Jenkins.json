@@ -1,0 +1,17 @@
+{
+    "tests": [
+        "test_0plugins/test_plugins_1.py"
+    ],
+    "configuration": {
+        "global": {
+            "rhost": "${RHOST}",
+            "ssh_username": "${SSH_USERNAME}",
+            "ssh_key": "${SSH_KEY_FILE}",
+            "ssh_key_password": "${SSH_PASSPHRASE}",
+            "serial_phycard_port": "${COM_PHYCARD}",
+            "peaktech1885_comport": "${COM_PEAKTECH}",
+            "usbopto4out_comport": "${COM_OPTO}",
+            "th085_comport": "${COM_TH085}"
+        }
+    }
+}

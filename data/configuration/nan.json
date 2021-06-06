@@ -1,7 +1,7 @@
 {
     "tests": [
         "test_rs232/test_tuxt_92.py",
-        "test_0plugins/test_plugins_1.py",
+        "test_0plugins/test_plugins_1.py"
     ],
     "configuration": {
         "test_tuxt_61": {
