@@ -150,7 +150,7 @@ def config_default_load(testid=None):
     """
 
     config = Configuration()
-    config_global = Configuration(path='data/default.json')
+    config_global = Configuration(path='data/tests/default.json')
     config.merge({"global": config_global.get_configuration()})
 
     if testid is not None:
